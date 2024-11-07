@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Google Font -->
+    <style>
+        /* General styles */
+        body {
+            display: flex; /* Enable Flexbox */
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center horizontally */
+            justify-content: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default margin */
+            background-color: #f4f4f4; /* Light gray background */
+            font-family: 'Roboto', sans-serif; /* Font family */
+        }
+
+        .container {
+            text-align: center; /* Center text alignment within the container */
+        }
+
+        .hero-image img {
+            max-width: 100%; /* Ensure the image is responsive */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners for hero image */
+        }
+
+        .main-nav {
+            display: flex; /* Enable Flexbox for navigation */
+            justify-content: center; /* Center buttons horizontally */
+            margin-top: 20px; /* Space above the buttons */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px; /* Button padding */
+            margin: 10px; /* Space between buttons */
+            background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient background */
+            color: white;
+            text-decoration: none;
+            border-radius: 50px; /* Pill shape for rounded buttons */
+            font-size: 1.1em; /* Slightly larger font */
+            font-weight: bold; /* Bold text for emphasis */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+            transition: all 0.3s ease; /* Smooth transition for all properties */
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #0056b3, #007bff); /* Reverse gradient on hover */
+            transform: translateY(-4px); /* Lift effect on hover */
+        }
+
+        .btn:active {
+            transform: translateY(2px); /* Pressed effect */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow when pressed */
+        }
+
+        footer {
+            margin-top: auto; /* Push footer to the bottom of the page if needed */
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+       <header>
+           <h1>Welcome to the Photo Website</h1>
+           <p>Your one-stop platform for sharing and managing your photos.</p>
+       </header>
+
+       <div class="hero-image">
+           <img src="{{ url_for('static', filename='images/hero.jpg') }}" alt="Beautiful Scenery">
+       </div>
+
+       <nav class="main-nav">
+           <a href="/signup" class="btn">Sign Up</a>
+           <a href="/login" class="btn">Login</a>
+           <a href="/logout" class="btn">Logout</a> <!-- Added Logout button -->
+       </nav>
+
+       <footer>
+           <p>&copy; 2024 Photo Website. All rights reserved.</p>
+       </footer>
+   </div>
+</body>
+</html>

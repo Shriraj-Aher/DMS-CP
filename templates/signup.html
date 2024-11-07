@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Google Font -->
+    <style>
+        /* General styles */
+        body {
+            display: flex; /* Enable Flexbox */
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center horizontally */
+            justify-content: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default margin */
+            background-color: #f4f4f4; /* Light gray background */
+            font-family: 'Roboto', sans-serif; /* Font family */
+        }
+
+        .container {
+            text-align: center; /* Center text alignment within the container */
+            width: 90%; /* Responsive width */
+            max-width: 400px; /* Limit width for forms */
+            padding: 30px;
+            background-color: #ffffff; /* White background for content */
+            border-radius: 10px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+        }
+
+        h1 {
+            color: #007bff; /* Blue accent color for heading */
+            margin-bottom: 20px; /* Space below heading */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column; /* Stack form elements vertically */
+        }
+
+        label {
+            margin-top: 10px; /* Space above labels */
+            text-align: left; /* Align labels to the left */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 12px;
+            margin-top: 5px; /* Space above inputs */
+            border-radius: 5px; /* Rounded corners */
+            border: 1px solid #ccc; /* Light border */
+            outline: none; /* Remove default outline on focus */
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #007bff; /* Change border color on focus to blue */
+        }
+
+        input[type="submit"] {
+            padding: 12px;
+            margin-top: 20px; /* Space above submit button */
+            background-color: #007bff; /* Blue accent color */
+            color: white;
+            border-radius: 5px; /* Rounded corners */
+            border: none; /* Remove default border */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: background-color 0.3s ease, transform 0.2s; /* Smooth transition for hover effects */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: translateY(-2px); /* Lift effect on hover */
+        }
+
+        footer {
+            margin-top: auto; /* Push footer to the bottom of the page if needed */
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+       <header>
+           <h1>Sign Up</h1>
+       </header>
+
+       <form method="post">
+           <label for="username">Username:</label>
+           <input type="text" name="username" required><br> 
+           <label for="password">Password:</label>
+           <input type="password" name="password" required><br> 
+           <input type="submit" value="Sign Up">
+       </form>
+
+       <footer>
+           <p>&copy; 2024 Photo Website. All rights reserved.</p>
+       </footer>
+   </div>
+</body>
+</html>
